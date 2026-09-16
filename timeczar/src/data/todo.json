@@ -1,0 +1,14 @@
+[
+{"type":"header","version":"5.2.1deb3","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"tomato220"},
+{"type":"table","name":"todo","database":"tomato220","data":
+[
+{"id":"21","userid":"1000","taskstatus":"Done","task":"New Task 13","timespent":"2","timestamp":"2023-11-17 18:48:08"},
+{"id":"22","userid":"1000","taskstatus":"Not Done","task":"New Task 14","timespent":"7","timestamp":"2023-11-17 18:50:42"},
+{"id":"23","userid":"1000","taskstatus":"Not Done","task":"New Task 14","timespent":"7","timestamp":"2023-11-17 18:51:29"},
+{"id":"24","userid":"1000","taskstatus":"Not Done","task":"Way to see way back in time. With pagination it would be possible to show all the tomatoes as in pagination only the 30 or so entrees will show per page.","timespent":"0","timestamp":"2023-11-19 14:50:36"},
+{"id":"25","userid":"1000","taskstatus":"Not Done","task":"Need to see stats on keywords. Like number of times they are actually used and ability to delete and replace value with NULL. Same with categories","timespent":"0","timestamp":"2023-11-19 14:58:00"},
+{"id":"26","userid":"1000","taskstatus":"Not Done","task":"Tomato edit: redo the whole edit thing. First, when you click the link to the tomato you should go to the noneditable view screen. There should be an Edit. That is how user gets to the editable page. On the Edit view the category should be the preselected in a select form element. The keywords with be a list of checkboxes with the currently used keywords already select. If the user decide to chose a completely different category, then the keywords available for that category should show. Somehow, the originally selected keywords should still be there if the user decides to go back to his original category.","timespent":"0","timestamp":"2023-11-19 15:17:37"}
+]
+}
+]

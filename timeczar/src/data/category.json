@@ -1,0 +1,25 @@
+[
+{"type":"header","version":"5.2.1deb3","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"tomato220"},
+{"type":"table","name":"category","database":"tomato220","data":
+[
+{"id":"1","userid":"1001","category":"Code","favorite":"0","timestamp":"2017-12-20 18:04:32"},
+{"id":"2","userid":"1001","category":"Norsk","favorite":"0","timestamp":"2017-12-20 18:04:32"},
+{"id":"3","userid":"1001","category":"Study","favorite":"0","timestamp":"2017-12-20 18:05:17"},
+{"id":"4","userid":"1001","category":"Health","favorite":"0","timestamp":"2017-12-20 18:05:17"},
+{"id":"5","userid":"1001","category":"Guitar","favorite":"0","timestamp":"2017-12-20 18:06:29"},
+{"id":"6","userid":"1001","category":"Task","favorite":"0","timestamp":"2017-12-20 18:06:29"},
+{"id":"7","userid":"1001","category":"Exercise","favorite":"0","timestamp":"2017-12-20 18:09:06"},
+{"id":"8","userid":"1001","category":"Drawing","favorite":"0","timestamp":"2017-12-20 18:09:06"},
+{"id":"9","userid":"1001","category":"Design","favorite":"0","timestamp":"2017-12-20 18:09:26"},
+{"id":"10","userid":"1001","category":"Writing","favorite":"0","timestamp":"2017-12-20 18:09:26"},
+{"id":"14","userid":"1001","category":"Job Search","favorite":"0","timestamp":"2017-12-20 18:11:40"},
+{"id":"20","userid":"1001","category":"Business","favorite":"0","timestamp":"2018-01-23 11:09:29"},
+{"id":"22","userid":"1001","category":"NULL","favorite":"0","timestamp":"2018-10-22 14:40:39"},
+{"id":"23","userid":"1001","category":"Kids","favorite":"1","timestamp":"2022-10-11 11:55:21"},
+{"id":"24","userid":"1001","category":"Organize","favorite":"1","timestamp":"2023-07-29 14:08:11"},
+{"id":"25","userid":"1001","category":"UX Scouts","favorite":"1","timestamp":"2023-11-14 23:24:02"},
+{"id":"26","userid":"1001","category":"UX\/UI","favorite":"1","timestamp":"2024-01-04 18:21:01"}
+]
+}
+]

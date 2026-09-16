@@ -1,0 +1,9 @@
+[
+{"type":"header","version":"5.2.1deb3","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"tomato220"},
+{"type":"table","name":"week","database":"tomato220","data":
+[
+{"id":"1","userid":"0","week":"2018-W28","timestamp":"2018-07-09 11:52:04"}
+]
+}
+]
