@@ -1,0 +1,40 @@
+/* Gives active links a bright, clear look against the dark navbar */
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff !important;
+  font-weight: 600;
+  border-bottom: 2px solid #ff4a4a; /* Optional: Accent line underneath matching a tomato color */
+}
+
+/* Add this to your index.css or main App.css file */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Forces the app wrapper to take full screen height */
+}
+
+.app-main-content {
+  flex: 1; /* Pushes the footer down by taking up all available space */
+}
+
+/* Optional hover polish for footer links */
+.hover-white:hover {
+  color: #fff !important;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Add this to your index.css or main App.css file */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Forces the app wrapper to take full screen height */
+}
+
+.app-main-content {
+  flex: 1; /* Pushes the footer down by taking up all available space */
+}
+
+/* Optional hover polish for footer links */
+.hover-white:hover {
+  color: #fff !important;
+  transition: color 0.2s ease-in-out;
+}
