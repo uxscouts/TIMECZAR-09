@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Form, FormGroup, Label, Input, Button, FormText } from 'reactstrap';
-import { Container, Row, Col } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-// const Tomato = ({ formData, onChange, onSubmit, categories = [] }) => {
-const Tomato = ({ formData, onChange, onSubmit }) => {
+const TomatoForm = ({ formData, onChange, onSubmit, categories = [] }) => {
   const handleChange = (e) => {
     const { name, value, type } = e.target;
     // Parse numeric fields appropriately
@@ -12,52 +10,12 @@ const Tomato = ({ formData, onChange, onSubmit }) => {
     onChange(name, parsedValue);
   };
 
-
-  // SSOT for the tomato record
-  const [tomatoData, setTomatoData] = useState({
-    userid: '',
-    categoryid: null,
-    title: '',
-    duration_mins: 25,
-    notes: '',
-  });
-
-  // SSOT for the tomato record
-  const [categories] = useState([
-    { id: 1, name: 'Work' },
-    { id: 2, name: 'Study' },
-    { id: 3, name: 'Personal' },
-  ]);
-
-  // SSOT for the tomato record
-  const handleFieldChange = (field, value) => {
-    setTomatoData((prev) => ({
-      ...prev,
-      [field]: value === '' && field === 'categoryid' ? null : value,
-    }));
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    onSubmit(formData);
   };
-
-  // SSOT for the tomato record
-  const handleTomatoSubmit = (data) => {
-    console.log('SSOT Submitted Data:', data);
-    // Send data to your backend API or SQL layer here
-  };
-
 
   return (
-    <>
-        <Container className="py-5">
-      <Row className="justify-content-md-center">
-        <Col md={6}>
-          <TomatoForm
-            formData={tomatoData}
-            onChange={handleFieldChange}
-            onSubmit={handleTomatoSubmit}
-            categories={categories}
-          />
-        </Col>
-      </Row>
-    </Container>
     <Form onSubmit={handleFormSubmit} className="p-4 border rounded bg-light">
       <h4 className="mb-3">Tomato Entry Form</h4>
 
@@ -141,8 +99,7 @@ const Tomato = ({ formData, onChange, onSubmit }) => {
         Save Tomato
       </Button>
     </Form>
-    </>
   );
 };
 
-export default Tomato;
+export default TomatoForm;

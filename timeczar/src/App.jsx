@@ -1,6 +1,8 @@
 // src/App.jsx
-import React from 'react';
+import React, { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
+import { FormProvider } from './context/FormContext';
+import { Container, Row, Col } from 'reactstrap';
 
 // Layout wrappers
 import RootLayout from './components/RootLayout';
@@ -23,6 +25,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 // Settings Sub-Pages
 import AccountSubPage from './pages/settings/AccountSubPage';
 import SecuritySubPage from './pages/settings/SecuritySubPage';
+
+
 
 const router = createBrowserRouter([
   {
@@ -60,5 +64,12 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  return <RouterProvider router={router} />;
+
+  return( 
+    <>
+    <FormProvider>
+  <RouterProvider router={router} />
+    </FormProvider>
+  </>
+  );
 }
