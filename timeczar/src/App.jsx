@@ -1,8 +1,8 @@
 // src/App.jsx
 import React, { useState } from 'react';
 import { createBrowserRouter, RouterProvider, Navigate } from 'react-router-dom';
-import { FormProvider } from './context/FormContext';
-import { Container, Row, Col } from 'reactstrap';
+//import { FormProvider } from './context/FormContext';
+//import { Container, Row, Col } from 'reactstrap';
 
 // Layout wrappers
 import RootLayout from './components/RootLayout';
@@ -11,9 +11,10 @@ import SettingsLayout from './pages/settings/SettingsLayout';
 // Primary App Pages
 import Home from './pages/Home';
 import Tomato from './pages/Tomato';
+import Tomato_SSOT from './pages/Tomato_SSOT'; 
 import Stats from './pages/Stats';
 import Goals from './pages/Goals';
-import Categories from './pages/Categories';
+import Category_SSOT from './pages/Category_SSOT';
 import Keywords from './pages/Keywords';
 import Logout from './pages/Logout';
 
@@ -35,13 +36,12 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "tomato", element: <Tomato /> },
+      { path: "tomato_SSOT", element: <Tomato_SSOT /> },
       { path: "stats", element: <Stats /> },
       { path: "goals", element: <Goals /> },
-      { path: "categories", element: <Categories /> },
+      { path: "categories", element: <Category_SSOT /> },
       { path: "keywords", element: <Keywords /> },
       { path: "logout", element: <Logout /> },
-      
-      // ➡️ Injected your new static utility paths here
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
       { path: "privacy", element: <PrivacyPolicy /> },
@@ -67,9 +67,7 @@ export default function App() {
 
   return( 
     <>
-    <FormProvider>
   <RouterProvider router={router} />
-    </FormProvider>
   </>
   );
 }

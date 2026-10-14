@@ -47,6 +47,11 @@ const Navigation = () => {
                 Tomato
               </NavLink>
             </NavItem>
+             <NavItem>
+              <NavLink tag={RouterNavLink} to="/tomato_SSOT" onClick={closeMenu}>
+                Tomato_SSOT
+              </NavLink>
+            </NavItem>           
             <NavItem>
               <NavLink tag={RouterNavLink} to="/stats" onClick={closeMenu}>
                 Stats
