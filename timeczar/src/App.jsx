@@ -10,12 +10,11 @@ import SettingsLayout from './pages/settings/SettingsLayout';
 
 // Primary App Pages
 import Home from './pages/Home';
-import Tomato from './pages/Tomato';
 import Tomato_SSOT from './pages/Tomato_SSOT'; 
 import Stats from './pages/Stats';
-import Goals from './pages/Goals';
+import Goals from './pages/Goals_SSOT';
 import Category_SSOT from './pages/Category_SSOT';
-import Keywords from './pages/Keywords';
+import Keywords_SSOT from './pages/Keywords_SSOT';
 import Logout from './pages/Logout';
 
 // NEW: Import the static utility content pages
@@ -35,12 +34,11 @@ const router = createBrowserRouter([
     element: <RootLayout />, 
     children: [
       { index: true, element: <Home /> },
-      { path: "tomato", element: <Tomato /> },
       { path: "tomato_SSOT", element: <Tomato_SSOT /> },
       { path: "stats", element: <Stats /> },
       { path: "goals", element: <Goals /> },
       { path: "categories", element: <Category_SSOT /> },
-      { path: "keywords", element: <Keywords /> },
+      { path: "keywords", element: <Keywords_SSOT /> },
       { path: "logout", element: <Logout /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },

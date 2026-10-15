@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TomatoFormPage from '../components/Tomato'; // Importing your form layout page
+import TomatoFormPage from '../components/TomatoForm'; // Importing your form layout page
 
 const Tomato_SSOT = () => {
   // 1. Single Source of Truth for the form inputs

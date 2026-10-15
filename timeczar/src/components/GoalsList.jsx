@@ -1,10 +1,9 @@
 import React from 'react';
 import { Container } from 'reactstrap';
-export default function Goals() {
+export default function GoalsList() {
   return (
     <Container className="py-5">
-      <h1>Goals</h1>
-      <p>Learn more about our goals here...</p>
+      <h1>Goals List</h1>
     </Container>
   )
 }

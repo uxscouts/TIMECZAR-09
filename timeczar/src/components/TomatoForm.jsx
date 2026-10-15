@@ -1,7 +1,6 @@
 // Tomato.jsx
 import React from 'react';
 import { Form, FormGroup, Label, Input, Button, FormText, Container, Row, Col } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 // This page accepts the SSOT tools through its parameters
 const Tomato = ({ formData, onFieldChange, onFormSubmit, categoriesList }) => {
@@ -10,7 +9,6 @@ const Tomato = ({ formData, onFieldChange, onFormSubmit, categoriesList }) => {
   const handleChange = (e) => {
     const { name, value, type } = e.target;
     const parsedValue = type === 'number' && value !== '' ? parseInt(value, 10) : value;
-    
     // Sends the clean data back up to Tomato_SSOT
     onFieldChange(name, parsedValue); 
   };

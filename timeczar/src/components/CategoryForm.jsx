@@ -1,9 +1,62 @@
+// Tomato.jsx
 import React from 'react';
-import { Container } from 'reactstrap';
-export default function CategoryForm() {
-  return (
+import { Form, FormGroup, Label, Input, Button, FormText, Container, Row, Col } from 'reactstrap';
+
+
+const CategoryForm= ({ formData, onFieldChange, onFormSubmit, keywordList }) => {
+ 
+ 
+   // Local wrapper to intercept raw typing events
+  const handleChange = (e) => {
+    const { name, value, type } = e.target;
+    const parsedValue = type === 'number' && value !== '' ? parseInt(value, 10) : value;
+    // Sends the clean data back up to Tomato_SSOT
+    onFieldChange(name, parsedValue); 
+  };
+ 
+  // Local wrapper to intercept form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onFormSubmit(formData); // Triggers the save function in Tomato_SSOT
+  };
+
+
+  return(
     <Container className="py-5">
-      <h1>Category Form</h1>
+      <Row className="justify-content-md-center">
+        <Col md={6}>
+          <Form onSubmit={handleSubmit} className="p-4 border rounded bg-light">
+            <FormGroup>
+             {/* <Label for="userid">User ID</Label> */}
+              <Input
+                type="hidden"
+                name="userid"
+                id="userid"
+               // value={formData.userid || ''}
+                onChange={handleChange}
+                required
+              />
+            </FormGroup>
+
+            <FormGroup>
+              <Label for="title">Category</Label>
+              <Input
+                type="text"
+                name="category"
+                id="category"
+                maxLength={100}
+               //  value={formData.title || ''}
+                onChange={handleChange}
+              />
+            </FormGroup>
+            <Button color="primary" type="submit">
+              Create Category
+            </Button>
+          </Form>
+        </Col>
+      </Row>
     </Container>
-  )
-}
+  );
+};
+export default CategoryForm;
+
