@@ -8,11 +8,14 @@ import {
   Col,
   Container,
   Form,
+  FormText,
   FormGroup,
   Input,
   Label,
   Row
 } from "reactstrap";
+
+
 
 const initialGoals = [
   { id: "84", userid: "1001", categoryid: "8", catname: "Drawing", hours: "0", active: "1", timeperiod: "week", timestamp: "2020-04-07 13:40:54" },
@@ -77,7 +80,7 @@ export default function GoalsComponent({ startingGoals = initialGoals }) {
        <Card className="shadow-sm">  
         <CardBody> 
       <h2>Create Goal</h2>
-      <form onSubmit={handleCreateGoal}>
+      <Form onSubmit={handleCreateGoal}>
 
         <FormGroup>
           <Label>
@@ -105,6 +108,20 @@ export default function GoalsComponent({ startingGoals = initialGoals }) {
             />
         </FormGroup>
 
+            <FormGroup>
+              <Label for="tomnato_count">Tomato Count</Label>
+              <Input
+                type="number"
+                name="tomnato_count"
+                id="tomnato_count"
+                min={1}
+                max={20}
+               // value={formData.duration_mins ?? 25}
+              //  onChange={handleChange}
+                required
+              />
+            </FormGroup>
+
         <FormGroup>
           <Label>
             Time Period
@@ -121,27 +138,6 @@ export default function GoalsComponent({ startingGoals = initialGoals }) {
             </Input>
         </FormGroup>
 
-        <FormGroup>
-          <label>
-            Category ID (`categoryid`):{" "}
-            <input
-              type="text"
-              value={categoryid}
-              onChange={(e) => setCategoryid(e.target.value)}
-            />
-          </label>
-        </FormGroup>
-
-        <FormGroup>
-          <label>
-            User ID (`userid`):{" "}
-            <input
-              type="text"
-              value={userid}
-              onChange={(e) => setUserid(e.target.value)}
-            />
-          </label>
-        </FormGroup>
 
         <FormGroup>
           <label>
@@ -150,11 +146,14 @@ export default function GoalsComponent({ startingGoals = initialGoals }) {
               checked={active === "1"}
               onChange={(e) => setActive(e.target.checked ? "1" : "0")}
             />{" "}
-            Active (`active = "1"`)
+            Active
           </label>
         </FormGroup>
-        <button type="submit">Create Goal</button>
-      </form>
+
+            <Button color="primary" type="submit">
+              Create Goal
+            </Button>
+      </Form>
       </CardBody> 
       </Card>
 

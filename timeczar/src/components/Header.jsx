@@ -40,9 +40,9 @@ export default function Header({ currentPage = "goals", onNavigate }) {
 
         <div className="d-flex align-items-center gap-2">
 
-
+            {/*
             <i className="bi bi-person-circle fs-4 text-primary" aria-hidden="true"></i>
-
+                */}
             
           {isAuthenticated && user ? (
             <>
