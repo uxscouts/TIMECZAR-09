@@ -80,45 +80,45 @@ export default function GoalsComponent({ startingGoals = initialGoals }) {
       <form onSubmit={handleCreateGoal}>
 
         <FormGroup>
-          <label>
-            Category Name (`catname`):{" "}
-            <input
+          <Label>
+            Category Name
+            </Label>
+            <Input
               type="text"
               value={catname}
               onChange={(e) => setCatname(e.target.value)}
               placeholder="e.g., Reading"
               required
             />
-          </label>
         </FormGroup>
 
-
-
         <FormGroup>
-          <label>
-            Target Hours (`hours`):{" "}
-            <input
+          <Label>
+            Target Hours
+            </Label>
+            <Input
               type="number"
               min="0"
               step="0.5"
               value={hours}
               onChange={(e) => setHours(e.target.value)}
             />
-          </label>
         </FormGroup>
 
         <FormGroup>
-          <label>
-            Time Period (`timeperiod`):{" "}
-            <select
-              value={timeperiod}
-              onChange={(e) => setTimeperiod(e.target.value)}
+          <Label>
+            Time Period
+          </Label>
+            <Input
+            type="select"
+            name="timeperiod"
+            value={timeperiod}
+            onChange={(e) => setTimeperiod(e.target.value)}
             >
               <option value="day">day</option>
               <option value="week">week</option>
               <option value="month">month</option>
-            </select>
-          </label>
+            </Input>
         </FormGroup>
 
         <FormGroup>
