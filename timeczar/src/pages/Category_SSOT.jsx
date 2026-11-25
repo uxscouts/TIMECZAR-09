@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import CategoryForm from '../components/CategoryForm';
 import CategoryList from '../components/CategoryList';
+import CategoryList2 from '../categories/CategoryList';
 
 const Category_SSOT = () => {
   const [categories, setCategories] = useState([]);
@@ -32,6 +33,7 @@ const Category_SSOT = () => {
   };
 
   return (
+    <>
     <div className="container py-5">
       <h2>Manage Categories</h2>
       
@@ -48,6 +50,8 @@ const Category_SSOT = () => {
         onDeleteClick={handleDeleteCategory} 
       />
     </div>
+    <CategoryList2/>
+    </>
   );
 };
 

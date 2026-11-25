@@ -20,7 +20,9 @@ import Logout from './pages/Logout';
 // NEW: Import the static utility content pages
 import About from './pages/About';
 import Contact from './pages/Contact';
-import PrivacyPolicy from './pages/PrivacyPolicy';
+import Privacy from './pages/Privacy';
+// import PrivacyPolicy from './pages/PrivacyPolicy';
+//import PrivacyPolicy from './pages/PrivacyPolicy';
 
 // Settings Sub-Pages
 import AccountSubPage from './pages/settings/AccountSubPage';
@@ -42,7 +44,7 @@ const router = createBrowserRouter([
       { path: "logout", element: <Logout /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
-      { path: "privacy", element: <PrivacyPolicy /> },
+     { path: "privacy", element: <Privacy /> },
       
       // Nested settings routing architecture
       {

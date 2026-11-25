@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import TomatoFormPage from '../components/TomatoForm'; // Importing your form layout page
+import TomatoDashboard from '../tomatoes/TomatoDashboard';
+import TomatoForm2 from '../tomatoes/TomatoForm';
 
 const Tomato_SSOT = () => {
   // 1. Single Source of Truth for the form inputs
@@ -34,12 +36,18 @@ const Tomato_SSOT = () => {
 
   // 5. Connect them by passing the SSOT data and handlers down as props
   return (
+    <>
     <TomatoFormPage
       formData={tomatoData}
       onFieldChange={handleFieldChange}
       onFormSubmit={handleTomatoSubmit}
       categoriesList={categories}
     />
+    <hr/>
+    <TomatoDashboard/>
+    <hr/>
+    <TomatoForm2/>
+    </>
   );
 };
 

@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import GoalsForm from '../components/GoalsForm';
 import GoalsList from '../components/GoalsList';
+import GoalsDashboard from '../goals/goalDashboard';
 
 const Goals_SSOT = () => {
   const [goals, setGoals] = useState([]);
@@ -32,9 +33,10 @@ const Goals_SSOT = () => {
   };
 
   return (
+    <>
     <div className="container py-5">
       <h2>Manage Goals</h2>
-      
+      <p>Hello</p>
       {/* Visual Form Component */}
       <GoalsForm 
         onSubmit={editingGoals ? handleUpdateGoal : handleCreateGoal}
@@ -48,6 +50,9 @@ const Goals_SSOT = () => {
         onDeleteClick={handleDeleteGoal} 
       />
     </div>
+    <hr/>
+    <GoalsDashboard/>
+    </>
   );
 };
 
