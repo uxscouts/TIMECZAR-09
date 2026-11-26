@@ -1,0 +1,39 @@
+
+
+body {
+  background-color: #f4f1ea; /* Warm zine paper off-white */
+}
+
+
+.punk-button {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  color: #ffffff;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+/* The warped solid red ink fill */
+.punk-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #d92b2b;
+  filter: url(#ink-stamp);
+  z-index: 0;
+  transition: transform 0.1s ease;
+}
+
+/* Keeps the button text sharp above the filtered background */
+.punk-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.punk-button:hover::before {
+  transform: scale(1.03) rotate(-1deg);
+}

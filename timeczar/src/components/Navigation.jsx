@@ -67,6 +67,11 @@ const Navigation = () => {
                 Keywords
               </NavLink>
             </NavItem>
+             <NavItem>
+              <NavLink tag={RouterNavLink} to="/test" onClick={closeMenu}>
+                Test
+              </NavLink>
+            </NavItem>           
           </Nav>
 
           {/* User Account Dropdown (Right-aligned) */}

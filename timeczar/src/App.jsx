@@ -16,6 +16,7 @@ import Goals from './pages/Goals_SSOT';
 import Category_SSOT from './pages/Category_SSOT';
 import Keywords_SSOT from './pages/Keywords_SSOT';
 import Logout from './pages/Logout';
+import Test from './pages/Test';
 
 // NEW: Import the static utility content pages
 import About from './pages/About';
@@ -46,6 +47,7 @@ const router = createBrowserRouter([
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
      { path: "privacy", element: <Privacy /> },
+     { path: "test", element: <Test /> },
       
       // Nested settings routing architecture
       {

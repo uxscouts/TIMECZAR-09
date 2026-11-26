@@ -21,6 +21,30 @@ This distorts the crisp mathematical lines of CSS into organic, stamped shapes w
   </filter>
 </svg>
 
+JSX Version:
+
+{/* Place this hidden SVG anywhere in your React component tree */}
+<svg style={{ position: 'absolute', width: 0, height: 0 }} aria-hidden="true">
+  <filter id="ink-stamp">
+    {/* Generates organic noise */}
+    <feTurbulence
+      type="fractalNoise"
+      baseFrequency="0.04"
+      numOctaves="3"
+      result="noise"
+    />
+    {/* Uses the noise to warp the edges of your HTML element */}
+    <feDisplacementMap
+      in="SourceGraphic"
+      in2="noise"
+      scale="4"
+      xChannelSelector="R"
+      yChannelSelector="G"
+    />
+  </filter>
+</svg>
+
+
 (Tip: Apply this filter to a pseudo-element like ::before rather than the <input> itself, otherwise the text inside the input box will also get warped!)
 
 
